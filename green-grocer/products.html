@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Grocer - Shop</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            color: black;
+            background: url('pexels-beyzaerdem-7548292.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background-color: #0F3325; 
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            margin: 0 auto;
+            width: 90%; 
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: url('images/hero-background.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.5em;
+        } 
+        
+        .container {
+            width: 80%; 
+            margin: 0 auto;
+            padding: 3em 4em; 
+            background-color: whitesmoke; 
+            border-radius: 10px;
+            margin-bottom: 0.5em;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .section h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .product {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 1em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1em;
+            gap: 1em;
+        }
+        .product img {
+            max-width: 200px; 
+            height: auto;
+        }
+        .product div {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            text-align: left; 
+            width: 100%; 
+        }
+        .product h3, .product p, .product button {
+            margin: 0; 
+            padding: 0.5em 0;
+        }
+        .product button {
+            padding: 0.5em 1em;
+            background-color: #0F3325;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: center;
+        }
+        .product button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #0F3325; 
+            color: white;
+            text-align: center;
+            padding: 1em 0;                        
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Shop produce</h1>
+        <p>Choose from an array of fresh, organic produce</p>
+    </section> 
+
+    
+    <div class="container">
+        <section class="section">
+            <h2>Shop now!</h2>
+           
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/ed/12/02/ed1202e3314b869acf9e2462dbec8cd9.jpg" alt="Fresh Apples">
+                <div>
+                    <h3>Fresh Apples</h3>
+                    <p>$2.99 per kg</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+           
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/a9/16/1b/a9161bfe350f7d3df0976a5fef9b5a98.jpg" alt="Organic Carrots">
+                <div>
+                    <h3>Organic Carrots</h3>
+                    <p>$1.49 per kg</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+           
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/93/5f/c1/935fc17b8492f4561457a4e10cda8f45.jpg" alt="Crisp Celery">
+                <div>
+                    <h3>Crisp Celery</h3>
+                    <p>$2.30 per kg</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/b3/fc/03/b3fc03139f102c89d9390f0e8a3b3753.jpg">
+                <div>
+                    <h3>Sweet Persimmons</h3>
+                    <p>$1.89 per kg</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+           
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/89/42/63/894263c82acd6627e2e3ab23555005d0.jpg">
+                <div>
+                    <h3>Organic Broccoli</h3>
+                    <p>$2.50 per bunch</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/55/ed/60/55ed60d69a45c5e943545a173795864c.jpg">
+                <div>
+                    <h3>Juicy Tomatoes</h3>
+                    <p>$3.00 per kg</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+         
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/c3/de/b2/c3deb2a88513949df4c4b988bc8a7b5c.jpg">
+                <div>
+                    <h3>Bell Peppers</h3>
+                    <p>$2.20 per kg</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/ba/39/54/ba39548d591fb3f553ba3854fe230018.jpg">
+                <div>
+                    <h3>Green Beans</h3>
+                    <p>$1.99 per kg</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 The Green Grocer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
