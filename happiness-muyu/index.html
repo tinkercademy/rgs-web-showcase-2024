@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css" />
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@400..700&family=Nerko+One&family=Roboto+Condensed:wght@300&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoodMingle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+     <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+      // import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAFKNtnSKVKoMnWtM5V9ToNgRic31THq8g",
+        authDomain: "counter-4bc8a.firebaseapp.com",
+        databaseURL:
+          "https://counter-4bc8a-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "counter-4bc8a",
+        storageBucket: "counter-4bc8a.appspot.com",
+        messagingSenderId: "961902161816",
+        appId: "1:961902161816:web:b6ad000c07fd9c0d6685ed",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      console.log(app)
+    </script>
+    
+    <!-- <script src="script.js"></script> -->
+    <script src="firebaseScript.js" type="module"></script>
+
+  <nav class="navbar">
+    <a href="index.html">Homepage</a>
+    <a href="music.html">Music</a>
+    <a href="books.html">Books</a>
+    <a href="posts.html">Posts</a>
+    <a href="me.html"><img src="IMG_3676.jpeg" width="25" height="25" /></a>
+  </nav>
+
+
+  <header>
+    <h1>MY HAPPINESS MUYU</h1>
+    <button class="header-button" onclick="createHeart()">Click me</button>
+    <script src="script.js"></script>
+  </header>
+
+  <main>
+
+
+    <body>
+      <div class="headers">
+        <h2>What is this platform?</h2>
+      </div>
+      <div class="intro" <p>Hi everyone! This is a webpage created by Yu Han and Zihan from RGS RA which provides you
+        with an online
+        space to relax, wind down, and take a break from all the stress in life. Feel free to browse around and find
+        what you need. We hope you enjoy! </p>
+      </div>
+      <div class="headers">
+        <h2>How am I feeling today?</h2>
+      </div>
+
+
+      <div class="container-wrapper1">
+
+        <div class="happy-container">
+          <p> <span id="counter1"> ? </span> people feel happy today</p>
+          <button class="happy-button" onclick="updateCounter(1)">Happy</button>
+          <script src="script.js"></script>
+        </div>
+
+        <div class="hspace"></div>
+
+        <div class="excited-container">
+          <p> <span id="counter2"> ? </span> people feel excited today</p>
+          <button class="excited-button"onclick="updateCounter(2)">Excited</button>
+          <script src="script.js"></script>
+        </div>
+
+        <div class="hspace"></div>
+
+        <div class="loved-container">
+          <p> <span id="counter3"> ? </span> people feel loved today</p>
+          <button class="loved-button"onclick="updateCounter(3)">Loved</button>
+          <script src="script.js"></script>
+        </div>
+
+      </div>
+
+      <div class="vspace"></div>
+
+      <div class="container-wrapper2">
+
+        <div class="angry-container">
+          <p> <span id="counter4"> ? </span>  people feel angry today</p>
+       
+          <button class="angry-button"onclick="updateCounter(4)">Angry</button>
+          <script src="script.js"></script>
+        </div>
+
+        <div class="hspace"></div>
+
+        <div class="stressed-container">
+          <p> <span id="counter5"> ? </span> people feel stressed today</p>
+          <button class="stressed-button"onclick="updateCounter(5)">Stressed</button>
+          <script src="script.js"></script>
+        </div>
+
+        <div class="hspace"></div>
+
+        <div class="sad-container">
+          <p> <span id="counter6"> ? </span>  people feel sad today</p>
+          <button class="sad-button"onclick="updateCounter(6)">Sad</button>
+          <script src="script.js"></script>
+        </div>
+
+      </div>
+      <div class="headers">
+        <h2>Experiencing Emotions</h2>
+      </div>
+
+      <div class="emotions">
+        <p>Experiencing both negative and positive emotions in our daily lives is completely normal. Learning how to
+          manage them can be hard. But remember, there are always people experiencing this with you!</p>
+      </div>
+    </body>
+
+    <div style="width: 100px; height: 200px;"></div>
+
+  </main>
+
+
+  <footer>
+    <p>&copy; 2024 Happinest Website. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
