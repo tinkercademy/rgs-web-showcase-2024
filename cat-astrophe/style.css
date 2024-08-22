@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  background-image: url(homepage.jpeg);
+ background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  margin: 0;
+}
+
+#STARTBUTTON {
+  font-size: 40px;
+  text-align: center;
+  display: inline-block; 
+  position: absolute;
+  color: #98856a;
+  border-radius: 5px;
+  font-family: Verdana, sans-serif;
+  border-color: #98856a;
+  background-color:#f5eedc;
+}
+
+#game-container {
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    color: #98856a;
+    border-radius: 5px;
+    font-family: Verdana, sans-serif;
+    border-color: #98856a;
+    background-color:#f5eedc;
+  }
+
+button {
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  color: #98856a;
+  border-radius: 5px;
+  font-family: Verdana, sans-serif;
+  border-color: #98856a;
+}
+
+\
