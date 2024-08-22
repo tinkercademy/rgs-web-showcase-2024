@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Own Bubble Tea</title>
+  <style>
+    /* CSS for styling */
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffe0f0; /* Light pink background */
+      animation: bubble-animation 10s infinite alternate; /* Bubble animation */
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff; /* White container background */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    }
+    h1 {
+      text-align: center;
+      color: #ff1493; /* Pink title color */
+    }
+    h2 {
+      color: #333; /* Dark font color */
+    }
+    .option-section {
+      margin-bottom: 20px;
+    }
+    .option-section h2 {
+      margin-bottom: 10px;
+    }
+    .option-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .option-item input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .submit-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #ff1493; /* Pink button color */
+      color: #fff; /* White button text color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #ff66b3; /* Lighter pink on hover */
+    }
+    @keyframes bubble-animation {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Make Your Own Bubble Tea</h1>
+
+    <div class="option-section">
+      <h2>Choose Your Tea</h2>
+      <div class="option-item">
+        <input type="radio" name="tea" id="blackTea" value="Black Tea">
+        <label for="blackTea">Black Tea</label>
+      </div>
+      <div class="option-item">
+        <input type="radio" name="tea" id="greenTea" value="Green Tea">
+        <label for="greenTea">Green Tea</label>
+      </div>
+      <div class="option-item">
+        <input type="radio" name="tea" id="oolongTea" value="Oolong Tea">
+        <label for="oolongTea">Oolong Tea</label>
+      </div>
+    </div>
+
+    <div class="option-section">
+      <h2>Choose Your Ingredients (up to 3)</h2>
+      <div class="option-item">
+        <input type="checkbox" id="tapioca" value="Tapioca Pearls">
+        <label for="tapioca">Tapioca Pearls</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="jelly" value="Jelly">
+        <label for="jelly">Jelly</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="pudding" value="Pudding">
+        <label for="pudding">Pudding</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="grassJelly" value="Grass Jelly">
+        <label for="grassJelly">Grass Jelly</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="coconut" value="Coconut Flakes">
+        <label for="coconut">Coconut Flakes</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="aloe" value="Aloe Vera">
+        <label for="aloe">Aloe Vera</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="eggPudding" value="Egg Pudding">
+        <label for="eggPudding">Egg Pudding</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="redBean" value="Red Bean">
+        <label for="redBean">Red Bean</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="lychee" value="Lychee Jelly">
+        <label for="lychee">Lychee Jelly</label>
+      </div>
+      <div class="option-item">
+        <input type="checkbox" id="bubble" value="Bubble">
+        <label for="bubble">Bubble</label>
+      </div>
+    </div>
+
+    <div class="option-section">
+      <h2>Choose Your Sugar Level</h2>
+      <select id="sugarLevel">
+        <option value="0">0% (No Sugar)</option>
+        <option value="25">25%</option>
+        <option value="50">50%</option>
+        <option value="100">100% (Full Sugar)</option>
+      </select>
+    </div>
+
+    <button class="submit-btn" onclick="calculatePrice()">Calculate Price</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Function to calculate the price based on selected options
+    function calculatePrice() {
+      // Tea price
+      const teaPrice = 2.50;
+
+      // Ingredient prices
+      const ingredientPrices = {
+        "Tapioca Pearls": 0.50,
+        "Jelly": 0.30,
+        "Pudding": 0.40,
+        "Grass Jelly": 0.35,
+        "Coconut Flakes": 0.25,
+        "Aloe Vera": 0.30,
+        "Egg Pudding": 0.45,
+        "Red Bean": 0.40,
+        "Lychee Jelly": 0.35,
+        "Bubble": 0.20
+      };
+
+      // Sugar level price adjustment
+      const sugarLevel = document.getElementById("sugarLevel").value;
+      const sugarPrice = (sugarLevel / 100) * 0.50; // Assuming $0.50 is the base price for sugar
+
+      // Calculate total price
+      let totalPrice = teaPrice + sugarPrice;
+      const selectedIngredients = document.querySelectorAll('input[type="checkbox"]:checked');
+      selectedIngredients.forEach(ingredient => {
+        totalPrice += ingredientPrices[ingredient.value];
+      });
+
+      // Display result
+     const resultDiv = document.getElementById("result");
+          resultDiv.innerHTML = `
+            <h2>Your Bubble Tea</h2>
+            <p>Tea: ${document.querySelector('input[name="tea"]:checked').value}</p>
+            <p>Ingredients:</p>
+            <ul>
+              ${Array.from(selectedIngredients).map(ingredient => `<li>${ingredient.value}</li>`).join("")}
+            </ul>
+            <p>Sugar Level: ${sugarLevel}%</p>
+            <p><strong>Total Price: $${totalPrice.toFixed(2)}</strong></p>
+          `;
+        }
+      </script>
+    </body>

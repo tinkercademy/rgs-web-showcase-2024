@@ -1,0 +1,19 @@
+body {
+    background-color: #fffdf5; /* light beige background */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    color: #333; /* dark grey text color */
+}
+
+p {
+    color: #666; /* medium grey text color */
+}

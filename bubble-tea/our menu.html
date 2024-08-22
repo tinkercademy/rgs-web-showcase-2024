@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">   
+<body>
+<script>
+  <body id="image-container">
+</script> 
+</body>
+
+  
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Tea Menu</title>
+  <style>
+    /* CSS for styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+    .menu-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .menu-item {
+      margin-bottom: 20px;
+      border: 1px solid #ffc0cb; /* Light pink border */
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #fff5f7; /* Light pink background */
+    }
+    .menu-item h2 {
+      margin-top: 0;
+      color: #333; /* Dark font color */
+    }
+    .menu-item p {
+      margin-bottom: 5px;
+      color: #666; /* Medium font color */
+    }
+    .menu-item strong {
+      color: #ff1493; /* Pink font color for price */
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <!-- Menu items will be dynamically added here -->
+  </div>
+
+  <script>
+    // Define menu items as an array of objects
+    const menuItems = [
+      {
+        name: "Classic Milk Tea",
+        description: "Black tea with milk and tapioca pearls.",
+        price: "$4.50"
+      },
+      {
+        name: "Taro Milk Tea",
+        description: "Taro-flavored milk tea with tapioca pearls.",
+        price: "$5.00"
+      },
+      {
+        name: "Matcha Milk Tea",
+        description: "Matcha green tea with milk and tapioca pearls.",
+        price: "$5.50"
+      },
+      {
+        name: "Honey Milk Tea",
+        description: "Black tea with honey and milk.",
+        price: "$4.75"
+      },
+      {
+        name: "Thai Milk Tea",
+        description: "Traditional Thai tea with milk and tapioca pearls.",
+        price: "$5.25"
+      },
+      {
+        name: "Rose Milk Tea",
+        description: "Black tea infused with rose flavor and milk.",
+        price: "$5.00"
+      },
+      {
+        name: "Brown Sugar Milk Tea",
+        description: "Milk tea sweetened with brown sugar and tapioca pearls.",
+        price: "$5.75"
+      },
+      {
+        name: "Almond Milk Tea",
+        description: "Milk tea flavored with almond syrup.",
+        price: "$5.25"
+      },
+      {
+        name: "Caramel Milk Tea",
+        description: "Milk tea with caramel flavoring and tapioca pearls.",
+        price: "$5.50"
+      },
+      {
+        name: "Coconut Milk Tea",
+        description: "Milk tea with coconut flavor and jelly.",
+        price: "$5.25"
+      }
+    ];
+
+    // Function to render menu items on the webpage
+    function renderMenu() {
+      const menuContainer = document.querySelector('.menu-container');
+
+      menuItems.forEach(item => {
+        const menuItem = document.createElement('div');
+        menuItem.classList.add('menu-item');
+        menuItem.innerHTML = `
+          <h2>${item.name}</h2>
+          <p>${item.description}</p>
+          <p><strong>${item.price}</strong></p>
+        `;
+        menuContainer.appendChild(menuItem);
+      });
+    }
+
+    // Call the renderMenu function to display menu items
+    renderMenu();
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Redirect</title>
+</head>
+<body>
+
+  <!-- Create a button with an ID -->
+  <button id="nextButton">Next Page</button>
+
+  <script>
+    // Get the button element by its ID
+    const nextButton = document.getElementById('nextButton');
+
+    // Add an event listener to the button for the 'click' event
+    nextButton.addEventListener('click', function() {
+      // Redirect to the next page
+      window.location.href = '3rdpg.html'; // Replace 'next_page.html' with the URL of your next page
+    });
+  </script>
+
+</body>
+</html>
